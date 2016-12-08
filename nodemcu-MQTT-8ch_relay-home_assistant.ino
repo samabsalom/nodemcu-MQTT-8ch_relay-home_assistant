@@ -15,13 +15,25 @@
     - https://github.com/mertenats/open-home-automation/blob/master/ha_mqtt_light/Schematic.png
     - GND - LED - Resistor 220 Ohms - D1/GPIO5
 
+    or use the pin  to trigger a relay 
+
    Configuration (HA) :
-    light:
+    switch:
       platform: mqtt
       name: Office light'
-      state_topic: 'changeme/light1/status'
-      command_topic: 'changeme/light1/switch'
+      state_topic: 'changeme/1/status'
+      command_topic: 'changeme/1/switch'
       optimistic: false
+
+  or
+
+  Configuration (HA) :
+   light:
+     platform: mqtt
+     name: Office light'
+     state_topic: 'changeme/1/status'
+     command_topic: 'changeme/1/switch'
+     optimistic: false
 
    Samuel M. - v1.1 - 08.2016
    If you like this example, please add a star! Thank you!
